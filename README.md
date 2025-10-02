@@ -1,6 +1,6 @@
 # Order Projection Kafka Streams App
 
-This project ingests lifecycle events from three topics (`order-created`, `order-placed`, `order-cancelled`), buffers them for up to 60 seconds per `order-id`, and emits a single ordered projection to `order-projection` when all required events arrive. Duplicates are ignored and incomplete lifecycles are dropped.
+This project ingests lifecycle events from three topics (`order-created`, `order-placed`, `order-cancelled`), buffers them for up to 5 seconds per `order-id`, and emits a single ordered projection to `order-projection` when all required events arrive. Duplicates are ignored and incomplete lifecycles are dropped.
 
 ## Quick-start Workflow
 
